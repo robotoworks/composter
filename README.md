@@ -1,4 +1,6 @@
 # Composter
+[![](https://jitpack.io/v/robotoworks/composter.svg)](https://jitpack.io/#robotoworks/composter)
+
 Composter is a RecyclerView data binding framework that favors composition over inheritance.
 
 
@@ -151,6 +153,17 @@ adapter.notifyDataSetChanged();
 The end result is this:
 
 ![](example.png)
+
+## Including this library
+```
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {  
+    compile 'com.github.robotoworks:composter:1.1'
+}
+```
 
 ## Licence
 
