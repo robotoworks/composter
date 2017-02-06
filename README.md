@@ -1,5 +1,4 @@
 # Composter
-[![](https://jitpack.io/v/robotoworks/composter.svg)](https://jitpack.io/#robotoworks/composter)
 
 Composter is a RecyclerView data binding framework that favors composition over inheritance.
 
@@ -161,9 +160,12 @@ repositories {
 }
 
 dependencies {  
-    compile 'com.github.robotoworks:composter:1.1'
+    compile 'com.github.robotoworks:composter:${composterVersion}'
 }
 ```
+
+Latest version:
+[![](https://jitpack.io/v/robotoworks/composter.svg)](https://jitpack.io/#robotoworks/composter)
 
 ## Licence
 
