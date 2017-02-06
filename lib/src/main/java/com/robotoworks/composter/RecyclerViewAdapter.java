@@ -66,7 +66,7 @@ public class RecyclerViewAdapter<ITEM> extends RecyclerView.Adapter {
                     throw new IllegalStateException(String.format("Missing binder for item of viewType %d at position %d!", itemViewType, position));
                 }
                 itemBinder.bindItem(item, holder);
-            } else {
+            } else if (binderManager.getFooterCount() > 0) {
                 final StaticBinding footerBinding = binderManager.getFooterBinding(position - headersPlusItems);
                 if (footerBinding == null) {
                     throw new IllegalStateException(String.format("Missing binder for footer at position %d!", position));

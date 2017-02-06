@@ -1,5 +1,7 @@
 package com.robotoworks.composter.dataset;
 
+import android.support.annotation.Nullable;
+
 import java.util.List;
 
 public abstract class ListRecyclerDataSet<ITEM> implements RecyclerDataset {
@@ -14,12 +16,13 @@ public abstract class ListRecyclerDataSet<ITEM> implements RecyclerDataset {
     @Override
     public int getItemCount() {
 
-        return items.size();
+        return items != null ? items.size() : 0;
     }
 
+    @Nullable
     @Override
     public ITEM getItem(int position) {
 
-        return items.get(position);
+        return items != null ? items.get(position) : null;
     }
 }

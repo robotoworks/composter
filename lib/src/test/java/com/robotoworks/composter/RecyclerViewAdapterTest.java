@@ -26,6 +26,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 public class RecyclerViewAdapterTest {
@@ -255,6 +256,29 @@ public class RecyclerViewAdapterTest {
 
         // assert
         verify(mockItemBinder).bindItem(eq("c"), eq(mockViewHolder));
+    }
+
+    @Test
+    public void onBindViewHolder_does_not_bind_item_if_item_null() {
+        // Scenario: 0 headers, null item set, 0 footers
+        // arrange
+        RecyclerView.ViewHolder mockViewHolder = mock(RecyclerView.ViewHolder.class);
+        ListRecyclerDataSet dataSet = new ListRecyclerDataSet(null) {
+            @Override
+            public int getItemViewType(int position) {
+
+                return 0;
+            }
+        };
+        recyclerViewAdapter.setSource(dataSet);
+        mockItemBinder = mock(ItemBinder.class);
+        when(mockBinderManager.getItemBinder(0)).thenReturn(mockItemBinder);
+
+        // act
+        recyclerViewAdapter.onBindViewHolder(mockViewHolder, 0);
+
+        // assert
+        verifyZeroInteractions(mockItemBinder);
     }
 
     @Test
