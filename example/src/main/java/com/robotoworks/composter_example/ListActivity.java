@@ -1,9 +1,11 @@
 package com.robotoworks.composter_example;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.robotoworks.composter.RecyclerViewAdapter;
@@ -18,7 +20,8 @@ import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
-    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
 
     private RecyclerViewAdapter<ListItem> adapter;
 

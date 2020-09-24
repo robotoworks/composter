@@ -1,8 +1,10 @@
 package com.robotoworks.composter;
 
 import android.annotation.SuppressLint;
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.robotoworks.composter.binders.ItemBinder;
 import com.robotoworks.composter.binders.StaticBinding;
 import com.robotoworks.composter.dataset.RecyclerDataset;

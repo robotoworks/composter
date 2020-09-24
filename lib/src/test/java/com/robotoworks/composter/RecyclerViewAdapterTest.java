@@ -1,8 +1,10 @@
 package com.robotoworks.composter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.junit.Before;
 import org.junit.Test;
 import com.robotoworks.composter.binders.ItemBinder;

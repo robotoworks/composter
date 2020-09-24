@@ -1,7 +1,9 @@
 package com.robotoworks.composter_example.viewholder;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.ButterKnife;
 
 public abstract class InjectableViewHolder extends RecyclerView.ViewHolder {

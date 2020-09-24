@@ -1,9 +1,10 @@
 package com.robotoworks.composter.mediators;
 
+import androidx.annotation.Nullable;
+
 import com.robotoworks.composter.binders.ItemBinder;
 import com.robotoworks.composter.binders.StaticBinder;
 import com.robotoworks.composter.binders.StaticBinding;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
